@@ -1,0 +1,724 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --narancssarga : #FF894F;
+    --font_family : 'Outfit'
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
+nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    
+
+    display: flex;
+    align-items: center;
+
+
+    padding-inline: 2vw;
+    padding-block: .5vw;
+
+    font-family: var(--font_family);
+
+    background-color: #181818;
+
+    & h2
+    {      
+        font-size: 2.5vw;
+        color: var(--narancssarga);
+    }
+
+    & ul
+    {
+        display: flex;
+        gap: 1.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+
+        & a
+        {
+            position: relative;
+
+            text-decoration: none;
+            color: white;
+            font-size: 1.2vw;
+        }
+
+        & a::before
+        {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 1px;
+
+            background-color: white;
+
+            transition: transform ease 0.3s;
+            transform: scale(0);
+            transform-origin: center;
+
+        }
+
+        & a:hover::before
+        {
+            transform: scale(1);
+        }
+    }
+
+    .nyelv
+    {
+        z-index: 100;
+        position: absolute;
+        top: 25%;
+        right: 0%;
+        transform: translate(-50%);
+
+        display: flex;
+        flex-direction: column;
+
+        max-height: 2vw;
+        padding: 1vw;
+        padding-top: .2vw;
+        overflow-y: hidden;
+        
+
+        color: white;
+        border: 1px solid var(--narancssarga);
+        border-radius: .2vw;
+
+        transition: max-height ease 0.5s;
+
+        & p
+        {
+            display: flex;
+            align-items: center;
+            gap: .3em;
+
+            font-size: 1.3vw;
+            align-self: first baseline;
+
+            & img
+            {
+                height: 1em;
+                aspect-ratio: 1.5/1;
+            }
+
+            & a
+            {
+                text-decoration: none;
+                color: white;
+            }
+
+            .fa-angle-up
+            {
+                opacity: 0;
+            }
+
+            .fa-angle-down
+            {
+                color: var(--narancssarga);
+                transition: all ease 0.4s;
+            }
+        }
+    }
+
+
+
+    .nyelv:hover
+    {
+        max-height: calc(4*1.3vw);
+        
+    }
+
+    .nyelv:hover .fa-angle-down
+    {
+        opacity: 0;
+    }
+}
+
+header
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #181818;
+    overflow-x:hidden ;
+
+    .wrapper
+    {
+        display: flex;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        width: 100%;
+        height: 100%;
+    
+        z-index: 2;
+        background: url(assets/DALLE_2024-02-21_16.25_1.webp) center/cover no-repeat;
+        
+        & article
+        {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-family: var(--font_family);
+        }
+
+        .desc
+        {
+            padding: 8vw;
+
+            & h2
+            {
+                color: var(--narancssarga);
+                font-size: 3vw;
+                width: 80%;
+                
+            }
+
+            & p
+            {
+                margin-top: 1vh;
+                width: 80%;
+
+                font-size: 1.2vw;
+                color: white;
+            }
+
+            .gombok
+            {
+                margin-top: 4vh;
+                display: flex;
+                gap: 2vw;
+
+                & a
+                {
+                    font-size: 1.4vw;
+                    text-decoration: none;
+                    color: var(--narancssarga);
+                    text-align: center;
+
+                    padding: 1vw;
+                    border: 1px solid var(--narancssarga);
+                    border-radius: .5vw;
+                    
+                    
+
+                    transition: all ease .4s;
+                }
+
+                & a:hover
+                {
+                    background-color: var(--narancssarga);
+                    color: white;
+                    filter: drop-shadow(0px 5px 10px var(--narancssarga));
+                }
+            }
+        }
+
+        .kep
+        {
+            .nagykep
+            {
+                position: relative;
+                height: 80vh;
+                aspect-ratio: 1;
+                transform: translateX(10%);
+            }
+
+             .elso
+            {
+                position: absolute;
+                height: 15%;
+                aspect-ratio: 1;
+                top: 25%;
+                right: 28%;
+            }
+
+            .masodik
+            {
+                position: absolute;
+                height: 15%;
+                aspect-ratio: 1;
+                top: 65%;
+                right: 28%;
+            }
+
+            .harmadik
+            {
+                position: absolute;
+                height: 15%;
+                aspect-ratio: 1;
+                bottom: 5%;
+                right: 2%;
+            }
+            
+        }
+    }
+
+}
+
+main
+{
+    #szolgaltatasaink
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-block: 10vh;
+
+        background-color: #181818;
+
+        font-family: var(--font_family);
+
+        & h1
+        {
+            font-size: 3vw;
+            color: var(--narancssarga);
+        }
+
+        & p
+        {
+            width: 70%;
+            margin-top: 3vh;
+
+
+            font-size: 1.3vw;
+            color: white;
+            text-align: center;
+        }
+
+        .card_wrapper
+        {
+            display: flex;
+            justify-content: center;
+            gap: 5vw;
+            width: 80%;
+
+            margin-top: 5vh;
+            padding-bottom: 5vh;
+
+            &::-webkit-scrollbar {
+                height: 1vh;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--narancssarga);
+            }
+        
+            &::-webkit-scrollbar-track {
+                background-color: #252525; 
+            }
+
+            .card
+            {
+                display: flex;
+                flex-shrink: 0;
+                flex-direction: column;
+
+                width: 18vw;
+
+                border: 2px solid var(--narancssarga);
+                border-radius: .5vw;
+                overflow: hidden;
+
+
+                .felso
+                {
+                    background: url(assets/sargahatterxdd.png) center/cover no-repeat;
+                    width: 100%;
+                    aspect-ratio: 1;
+                }
+
+                .also
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+
+                    padding-block: 2vw;
+                    padding-inline: 2vw;
+
+                    & h3
+                    {
+                        color: var(--narancssarga);
+                        font-size: 1.5vw;
+                    }
+
+                    & p
+                    {
+                        font-size: 1vw;
+                        margin-bottom: 5vh;
+                    }
+
+                    & a
+                    {
+                        text-decoration: none;
+                        color: var(--narancssarga);
+                        font-size: 1.1vw;
+                        
+                        transition: all ease 0.4s;
+                        
+                        & i
+                        {
+                            margin-left: .2vw;
+                            transition: all ease 0.4s;
+                        }
+                    }
+
+                    & a:hover i
+                    {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+
+                    & a:hover
+                    {
+                        transform: translate(10%);
+                    }
+                }
+
+            }
+        }
+
+
+        .paca
+        {
+            position: absolute;
+            top: -20%;
+            left: 0;
+            height: 50%;
+            z-index: 100;
+        }
+
+        .paca2
+        {
+            position: absolute;
+            bottom: -20%;
+            right: 0;
+            height: 50%;
+            z-index: 100;
+        }
+
+        .haromszog
+        {
+            position: absolute;
+            bottom: -25%;
+            left: 0;
+            height: 50%;
+            z-index: 100;
+        }
+    }
+
+    #munkaink
+    {
+        background-color: #1b1b1b;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-block: 10vh;
+
+        font-family: var(--font_family);
+
+        & h1
+        {
+            font-size: 3vw;
+            color: var(--narancssarga);
+        }
+
+        & p
+        {
+            width: 70%;
+            margin-top: 3vh;
+
+
+            font-size: 1.3vw;
+            color: white;
+            text-align: center;
+        }
+        .wrap
+        {
+            position: relative;
+
+            display: flex;
+
+            width: 80%;
+
+            overflow-x: hidden;
+
+            .slider_wrapper
+            {
+              
+                
+                display: flex;
+                flex-shrink: 0;
+
+                justify-content: center;
+                gap: 5vw;
+
+                width: 100%;    
+                
+                margin-top: 10vh;
+
+                transition: all 0.7s ease-in-out;
+    
+                .slider_card
+                {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 0;
+    
+                    & img
+                    {
+                        width: 20vw;
+                        aspect-ratio: 1;
+                        border-radius: 1vw;
+                        object-fit: cover;
+                    }
+    
+                    & h3
+                    {
+                        font-size: 1.6vw;
+                        color: var(--narancssarga);
+                        margin-top: 2vh;
+                    }
+    
+                    & p
+                    {
+                        margin-top: 1vh;
+                        text-align: start;
+                        font-size: 1.1vw;
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+       
+        #balra
+        {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+
+            font-size: 3vw;
+            color: var(--narancssarga);
+
+            z-index: 100;
+
+            background-color: transparent;
+            border: none;
+
+            
+        }
+
+        #jobbra
+        {
+            position: absolute;
+            top: 55%;
+            right: 5%;
+            
+            font-size: 3vw;
+            color: var(--narancssarga);
+
+            
+            background-color: transparent;
+            border: none;
+            
+            z-index: 100;
+        }
+
+        .balra_tolas
+        {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .jobbra_tolas
+        {
+            transform: translate(100%);
+            opacity: 0;
+        }
+
+        .fa-chevron-right, .fa-chevron-left
+        {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        #jobbra:hover .fa-chevron-right{
+            transform: scale(1.2);
+        }
+
+        #balra:hover .fa-chevron-left{
+            transform: scale(1.2);
+        }
+
+        .balfos
+        {
+            position: absolute;
+            left: 0%;
+            bottom: -25%;
+
+            height: 50%;
+
+            
+        }
+
+        .haromszog
+        {
+            position: absolute;
+            right: 0%;
+            bottom: -25%;
+
+            height: 50%;
+
+            rotate: 180deg;
+        }
+    }
+
+    #rolunk
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-block: 10vh;
+
+        background-color: #181818;
+
+        font-family: var(--font_family);
+
+        & h1
+        {
+            font-size: 3vw;
+            color: var(--narancssarga);
+        }
+
+        & p
+        {
+            width: 70%;
+            margin-top: 3vh;
+
+
+            font-size: 1.3vw;
+            color: white;
+            text-align: center;
+        }
+        
+        .container 
+        {  
+            margin-top: 10vh;
+
+            width: 80%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 4vh 2vw;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "elso masodik"
+              "elso harmadik"
+              "negyedik harmadik"
+              "negyedik harmadik"
+              "negyedik otodik";
+
+          }
+          
+          & img
+          {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1vw;
+            filter: brightness(0.6);
+          }
+
+          div
+          {
+            position: relative;
+
+            & aside
+            {
+                position: absolute;
+                height: fit-content;
+                
+                bottom: 2%;
+                left: 3%;
+
+                & h2
+                {
+                    color: white;
+                }
+
+                & p
+                {
+                    text-align: start;
+                    color: grey;
+                    font-size: 1vw;
+
+                    margin-top: 0;
+                    width: 100%;
+                }
+
+            }
+          }
+        
+
+          .elso { grid-area: elso; }
+          
+          .masodik { grid-area: masodik; }
+          
+          .harmadik { grid-area: harmadik; }
+          
+          .negyedik { grid-area: negyedik; }
+          
+          .otodik { grid-area: otodik; }
+          
+        
+          
+    }
+}
