@@ -16,6 +16,8 @@ html
     scroll-behavior: smooth;
 }
 
+
+
 body
 {
     overflow-x: hidden;
@@ -289,37 +291,41 @@ header
 
 main
 {
+    #munkaink, #rolunk, #kapcsolat, #szolgaltatasaink
+    {
+          position: relative;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            padding-block: 10vh;
+        
+            font-family: var(--font_family);
+    
+            & h1
+            {
+                font-size: 3vw;
+                color: var(--narancssarga);
+            }
+    
+            & p
+            {
+                width: 70%;
+                margin-top: 3vh;
+    
+    
+                font-size: 1.3vw;
+                color: white;
+                text-align: center;
+            }
+    }
+
     #szolgaltatasaink
     {
-        position: relative;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding-block: 10vh;
 
         background-color: #181818;
-
-        font-family: var(--font_family);
-
-        & h1
-        {
-            font-size: 3vw;
-            color: var(--narancssarga);
-        }
-
-        & p
-        {
-            width: 70%;
-            margin-top: 3vh;
-
-
-            font-size: 1.3vw;
-            color: white;
-            text-align: center;
-        }
 
         .card_wrapper
         {
@@ -448,33 +454,6 @@ main
     {
         background-color: #1b1b1b;
 
-        position: relative;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding-block: 10vh;
-
-        font-family: var(--font_family);
-
-        & h1
-        {
-            font-size: 3vw;
-            color: var(--narancssarga);
-        }
-
-        & p
-        {
-            width: 70%;
-            margin-top: 3vh;
-
-
-            font-size: 1.3vw;
-            color: white;
-            text-align: center;
-        }
         .wrap
         {
             position: relative;
@@ -484,6 +463,7 @@ main
             width: 80%;
 
             overflow-x: hidden;
+
 
             .slider_wrapper
             {
@@ -601,6 +581,8 @@ main
 
             height: 50%;
 
+            z-index: 100;
+
             
         }
 
@@ -613,44 +595,45 @@ main
             height: 50%;
 
             rotate: 180deg;
+
+            z-index: 100;
         }
     }
 
     #rolunk
     {
-        position: relative;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        padding-block: 10vh;
 
         background-color: #181818;
 
-        font-family: var(--font_family);
-
-        & h1
+        .jobbpaca
         {
-            font-size: 3vw;
-            color: var(--narancssarga);
+          
+            position: absolute;
+            left: 0%;
+            bottom: -25%;
+
+            height: 10%;
+
+            z-index: 100;
+
+            
         }
 
-        & p
+        .haromszog
         {
-            width: 70%;
-            margin-top: 3vh;
+            position: absolute;
+            left: 0%;
+            bottom: -25%;
 
-
-            font-size: 1.3vw;
-            color: white;
-            text-align: center;
+            height: 50%;
+  
+            z-index: 100;
         }
         
         .container 
         {  
             margin-top: 10vh;
+            margin-bottom: 10vh;
 
             width: 80%;
             height: 80%;
@@ -681,6 +664,7 @@ main
           {
             position: relative;
 
+            
             & aside
             {
                 position: absolute;
@@ -718,7 +702,187 @@ main
           
           .otodik { grid-area: otodik; }
           
-        
           
     }
+
+    #kapcsolat
+    {
+        background-color: #1b1b1b;
+        position: relative;
+
+        .wrapper
+        {
+            display: flex;
+            justify-content: center;
+
+            margin-top: 10vh;
+            width: 80%;
+            
+            .kontakt
+            {
+                overflow: hidden;
+
+                position: relative;
+
+                padding: 2.5vw;
+                width: 40%;
+                border-radius: 1vw 0 0 1vw;
+
+                background-color: var(--narancssarga);
+
+                & h3
+                {
+                    font-size: 2vw;
+                    color: white;
+                }
+
+                & p
+                {
+                    font-size: 1vw;
+                    text-align: start;
+
+                    margin-top: 0;
+                }
+
+                & ul
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5vh;
+
+                    margin-top: 10vh;
+                    margin-bottom: 30vh;
+
+                    & p
+                    {
+                        font-size: 1.3vw;
+                    }
+                }
+
+                .kor
+                {
+                    position: absolute;
+                    bottom: -10%;
+                    right: -5%;
+
+                    background: linear-gradient(158.5deg, #FED5C1 -34.78%, rgba(255, 158, 103, 0) 92.35%);
+                    
+
+                    width: 30%;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                }
+            }
+
+            & form
+            {
+                position: relative;
+                background-color: #191919;
+                width: 60%;
+                padding: 2.5vw;
+                padding-inline: 5%;
+                color: rgb(165, 165, 165);
+
+                border-radius: 0vw 1vw 1vw 0vw;
+
+                .input_wrapper
+                {
+                    margin-top: 5vh;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 80%;
+                    
+                    .mezo
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        gap:1vh;
+                    }
+                }
+
+                .mezo
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap:1vh;
+
+                
+                }
+
+                & input
+                {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: .5vh solid #3a3a3a;
+                    outline: none;
+                    padding-block: .5vw;
+                    padding-inline-start: .2vw;
+
+                    color: rgb(165, 165, 165);
+                    font-size: 1vw;
+                }
+
+                .uzenet
+                {
+                    margin-top: 5vh;    
+                    width: 80%;
+                }
+
+                & button
+                {
+                    position: absolute;
+                    top:85%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+
+                    padding: .8vw;
+                    width: 20%;
+                    border-radius: 1vw;
+                    outline: none;
+                    border: none;
+
+                    background-color: var(--narancssarga);
+                    color: white;
+                    font-family: var(--font_family);
+                    font-size: 1.3vw;
+
+                }
+
+                & button:hover
+                {
+                    filter: drop-shadow(5px 5px 10px var(--narancssarga));
+                    cursor: pointer;
+                }
+
+
+
+            }
+        }
+
+        .jobbpaca
+        {
+            position: absolute;
+            top: -20%;
+            right: 0;
+            height: 50%;
+            z-index: 100;
+        }
+
+        .haromszog
+        {
+            position: absolute;
+            top: -25%;
+            left: 0;
+            height: 50%;
+            z-index: 100%;
+        }
+
+
+    }
+    
+}
+
+footer
+{
+    
 }
