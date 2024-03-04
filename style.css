@@ -696,13 +696,21 @@ main
 
             & aside
             {
+
+
                 position: absolute;
-                bottom: 1%;
-                left: 3;
+                bottom: 0;
+                left: 0;
+                background-color: #252525;
 
                 width: 100%;
+                height: 3.5vw;
 
                 padding: 1vw;
+
+
+                transition: all ease 0.4s;
+
 
                 & h2
                 {
@@ -717,12 +725,23 @@ main
                     font-size: 1vw;                    
                     margin-top: 0;
                     width: 90%;
+                    opacity: 0;
 
+                    transition:  all ease 0.1s;
                 }
 
             }
           }
-        
+          
+          & img:hover + aside
+          {
+            height: fit-content;
+          }
+
+          & img:hover + aside > p
+          {
+            opacity: 1;
+          }
 
           .elso { grid-area: elso; }
           
@@ -1561,6 +1580,8 @@ footer
         transition: all ease 0.5s;
 
         z-index: 100;
+
+        font-family: var(--font_family);
 
         & ul
         {
