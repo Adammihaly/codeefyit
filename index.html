@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20993e564e.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/codeefy.png" type="image/png">   
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Codeefy</title>
 </head>
 <body>
 
@@ -14,9 +16,9 @@
         <h2>codeefy</h2>
         <ul>
             <a href="">Kezdőlap</a>
-            <a href="#rolunk">Rólunk</a>
-            <a href="#munkaink">Munkáink</a>
             <a href="#szolgaltatasaink">Szolgáltatások</a>
+            <a href="#munkaink">Munkáink</a>
+            <a href="#rolunk">Rólunk</a>
             <a href="#kapcsolat">Kapcsolat</a>
         </ul>
         <div class="nyelv">
@@ -24,7 +26,7 @@
             <p><a href="">EN</a><i class="fa-solid fa-angle-up"></i></p>
             <p><a href="">SR</a><i class="fa-solid fa-angle-up"></i></p>
         </div> 
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" id="hamburger"></i>
     </nav>
     <header>
         <div class="wrapper">
@@ -33,12 +35,12 @@
                 <h2>Mi megvalósítjuk</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam veniam assumenda quia rerum repudiandae modi?</p>
                 <div class="gombok">
-                    <a href="">Learn more</a>
+                    <a href="" class="learn_more">Learn more</a>
                     <a href="">Get in touch</a>
                 </div>
             </article>
             <article class="kep">
-                <img src="assets/Vector.svg" alt="" class="nagykep">
+                <img src="assets/Vector.svg" alt="" class="nagykep" id="nagypaca">
                 <img src="assets/element.svg" alt="" class="elso">
                 <img src="assets/element.svg" alt="" class="masodik">
                 <img src="assets/element.svg" alt="" class="harmadik">
@@ -47,11 +49,11 @@
     </header>
     <main>
         <section  id="szolgaltatasaink">
-            <h1>Szolgáltatásaink</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem soluta hic ex alias molestias iste excepturi fuga consequuntur possimus quia.</p>
+            <h1 id="h1">Szolgáltatásaink</h1>
+            <p id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem soluta hic ex alias molestias iste excepturi fuga consequuntur possimus quia.</p>
             <article class="card_wrapper" id="card_wrapper">
                 <div class="card">
-                    <div class="felso"></div>
+                    <div class="felso" style="background-image: url(assets/kep2.jpg);"></div>
                     <div class="also">
                         <h3>Mobile design</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
@@ -59,7 +61,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="felso"></div>
+                    <div class="felso" style="background-image: url(assets/kep3.webp);"></div>
                     <div class="also">
                         <h3>Web design</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
@@ -67,7 +69,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="felso"></div>
+                    <div class="felso" style="background-image: url(assets/kep4.png);"></div>
                     <div class="also">
                         <h3>Web development</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
@@ -82,59 +84,59 @@
             <img src="assets/haromszog.svg" alt="haromszog" class="haromszog" loading="lazy">
         </section>
         <section id="munkaink">
-            <h1>Munkáink</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem soluta hic ex alias molestias iste excepturi fuga consequuntur possimus quia.</p>
+            <h1 id="h1">Munkáink</h1>
+            <p id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem soluta hic ex alias molestias iste excepturi fuga consequuntur possimus quia.</p>
             <div class="wrap" id="wrap">
                 <article class="slider_wrapper" id="elso">
-                    <div class="slider_card">
+                    <a href="" class="slider_card">
                         <img src="assets/kep2.jpg" alt="" loading="lazy">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
-                    <div class="slider_card">
+                    </a>
+                    <a href="" class="slider_card">
                         <img src="assets/kep3.webp" alt="" loading="lazy">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
-                    <div class="slider_card">
+                    </a>
+                    <a href="" class="slider_card">
                         <img src="assets/kep4.png" alt="" loading="lazy">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
+                    </a>
                 </article>
                 <article class="slider_wrapper" id="masodik">
-                    <div class="slider_card">
+                    <a href="" class="slider_card">
                         <img src="assets/kep2.jpg" alt="" loading="lazy">
-                        <h3>Ciganyxddd</h3>
+                        <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
-                    <div class="slider_card">
+                    </a>
+                    <a href="" class="slider_card">
                         <img src="assets/kep3.webp" alt="" loading="lazy">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
-                    <div class="slider_card">
+                    </a>
+                    <a href="" class="slider_card">
                         <img src="assets/kep4.png" alt="" loading="lazy">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
+                    </a>
                 </article>
                 <article class="slider_wrapper" id="harmadik">
-                    <div class="slider_card">
+                    <a href="" class="slider_card">
                         <img src="assets/kep2.jpg" alt="" loading="lazy">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
-                    <div class="slider_card">
+                    </a>
+                    <a href="" class="slider_card">
                         <img src="assets/kep3.webp" alt="" loading="lazy">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
-                    <div class="slider_card">
+                    </a>
+                    <a href="" class="slider_card">
                         <img src="assets/kep4.png" alt="" loading="lazy">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ipsa.</p>
-                    </div>
+                    </a>
                 </article>
             </div>
             <button id="balra"><i class="fa-solid fa-chevron-left"></i></button>
@@ -143,22 +145,22 @@
             <img src="assets/haromszog.svg" alt="" class="haromszog" loading="lazy">
         </section>
         <section id="rolunk">
-            <h1>Rólunk</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem soluta hic ex alias molestias iste excepturi fuga consequuntur possimus quia.</p>
+            <h1 id="h1">Rólunk</h1>
+            <p id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem soluta hic ex alias molestias iste excepturi fuga consequuntur possimus quia.</p>
             
             <div class="container">
                 <div class="elso">
                     <img src="assets/kep2.jpg" alt="" loading="lazy">
                     <aside>
                         <h2>Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                        <!-- <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates placeat quis ea totam veritatis eaque corrupti iste provident delectus velit?</p> -->
                     </aside>
                 </div>
                 <div class="masodik">
                     <img src="assets/kep3.webp" alt="" loading="lazy">
                     <aside>
                         <h2>Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium animi maxime rem qui molestias fuga eligendi placeat expedita repellat tenetur?</p>
                     </aside>
                 </div>
                 <div class="harmadik">
@@ -185,8 +187,8 @@
               </div>
         </section>
         <section id="kapcsolat">
-            <h1>Kapcsolat</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem soluta hic ex alias molestias iste excepturi fuga consequuntur possimus quia.</p>
+            <h1 id="h1">Kapcsolat</h1>
+            <p id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem soluta hic ex alias molestias iste excepturi fuga consequuntur possimus quia.</p>
             <article class="wrapper">
                 <div class="kontakt">
                     <h3>Kontakt</h3>
@@ -219,11 +221,9 @@
                         </div>
                     </div>
                 
-                    <div class="input_wrapper">
-                        <div class="mezo">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Email..." required>
-                        </div>
+                    <div class="mezo uzenet">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Email..." required>
                     </div>
 
                     <div class="mezo uzenet">
@@ -239,6 +239,7 @@
             <img src="assets/haromszog.svg" alt="" loading="lazy" class="haromszog">
         </section>
     </main>
+
     <footer>
         <h2>codeefy</h2>
         <ul>
@@ -267,11 +268,27 @@
         <div class="social">
             <a href="https://www.facebook.com/profile.php?id=61557030055788&mibextid=ZbWKwL" target="_blank" class="fa-brands fa-facebook"></a>
             <a href="https://www.instagram.com/codeefyit/" target="_blank" class="fa-brands fa-instagram"></a>
-            <a class="fa-brands fa-linkedin"></a>
         </div>
         <h5><strong>Codeefy ®</strong> Minden jog fenntartva!</h5>
     </footer>
-    
+
+
+    <div id="telonezet">
+        <ul>
+            <a href="">Kezdőlap</a>
+            <a href="#szolgaltatasaink">Szolgáltatások</a>
+            <a href="#munkaink">Munkáink</a>
+            <a href="#rolunk">Rólunk</a>
+            <a href="#kapcsolat">Kapcsolat</a>
+        </ul>
+        <div class="nyelv">
+            <p><a href="">HU</a></p>
+            <p><a href="">EN</a></p>
+            <p><a href="">SR</a></p>
+        </div> 
+        <h5><strong>Codeefy ®</strong> Minden jog fenntartva!</h5>
+    </div>
+
     <script src="script.js"></script>
     <script src="swiper.js"></script>
 </body>
