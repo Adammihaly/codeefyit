@@ -17,6 +17,11 @@
 					$ugyfelemail2 = $_POST['email2'];
 					$uzenet = $_POST['uzenet'];
 
+					if ($ugyfelemail2 != 'a') {
+						header("Location: https://codeefyyit.com");
+						exit();
+					}
+
     				$mail = 'adammihaly05@gmail.com';
     				$username = 'adammihaly05@gmail.com';
 

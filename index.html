@@ -198,21 +198,22 @@ Vegye fel velünk a kapcsolatot, és ossza meg terveit vagy igényeit! Teljesen 
                     </ul>
                     <div class="kor"></div>
                 </div>
-                <form>
+                <form method="POST" action="php/mail.php">
                     <div class="input_wrapper">
                         <div class="mezo">
                             <label for="keresztnev">Keresztnév</label>
-                            <input type="text" id="keresztnev" placeholder="Neve..." required>
+                            <input type="text" id="keresztnev" placeholder="Neve..." name="knev" required>
                         </div>
                         <div class="mezo">
                             <label for="vezeteknev">Vezetéknév</label>
-                            <input type="text" id="vezeteknev" placeholder="Vezetékneve..." required>
+                            <input type="text" id="vezeteknev" placeholder="Vezetékneve..." name="vnev" required>
                         </div>
                     </div>
                 
                     <div class="mezo uzenet">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Email címe..." required>
+                        <input type="email" id="email" placeholder="Email címe..." name="email" required>
+                        <input type="hidden" name="email2" placeholder="Email2..." value="a" required>
                     </div>
 
                     <div class="mezo uzenet">
